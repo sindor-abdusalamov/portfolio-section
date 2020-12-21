@@ -1,0 +1,264 @@
+.header {
+  max-width: 1600px;
+  height: 100%;
+  margin: 0 auto;
+  padding-top: 75px;
+  padding-bottom: 238px;
+  background-image: url(../img/bg/header-line.jpg);
+  background-size: auto;
+  background-repeat: repeat-y;
+  background-position: center;
+}
+
+.header-top {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 146px;
+}
+
+.header-logo {
+  position: relative;
+  font-size: 42px;
+  font-weight: 900;
+  color: #000;
+  z-index: 2;
+
+  & .yellow-line::after {
+    left: -3px;
+    bottom: 10px;
+    height: 10px;
+    width: 107%;
+  }
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & li {
+    margin-right: 79px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  & .menu-item {
+    position: relative;
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+    z-index: 2;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 5px;
+      width: 0;
+      height: 7px;
+      background-color: var(--lbcol);
+      transition: 0.5s;
+      z-index: -1;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}
+
+.header-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & a {
+    margin-right: 21px;
+    color: #000;
+    width: 29px;
+    height: 29px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  & .telegram-icon {
+    width: 26px;
+    height: 27px;
+  }
+  & .vk-icon {
+    width: 33px;
+    height: 28px;
+  }
+}
+
+.header-introduction {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+
+  & .header-introduction__img {
+    width: 457px;
+    position: relative;
+    z-index: 2;
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 30%;
+      top: 30%;
+      background-image: -webkit-linear-gradient(
+        90deg,
+        rgb(244, 248, 249) 0%,
+        rgba(244, 248, 249, 0) 100%
+      );
+      opacity: 0.502;
+      z-index: -1;
+    }
+
+    & img {
+      margin-top: 26px;
+    }
+  }
+
+  & .header-introduction__text {
+    width: 50%;
+    z-index: 9;
+
+    & h1 {
+      margin-bottom: 16px;
+      position: relative;
+      font-size: 90px;
+      font-weight: 800;
+      line-height: 1.2;
+      color: #000;
+      z-index: 2;
+
+      & .yellow-line::after {
+        left: 0px;
+        bottom: 12px;
+        height: 12px;
+        width: 100%;
+      }
+    }
+
+    & p {
+      margin-bottom: 35px;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 1.5;
+      color: #000;
+    }
+  }
+
+  & .general-btn {
+    margin-right: 16px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  & .light-btn {
+    padding-right: 35px;
+    padding-left: 35px;
+  }
+}
+
+.big-image {
+  margin-top: -123px;
+  margin-bottom: -5px;
+  z-index: 1;
+}
+
+.header-bottom {
+  display: flex;
+}
+
+.skills {
+  margin-right: 180px;
+
+  & .skills-title {
+    margin-bottom: 23px;
+    font-size: 40px;
+    font-weight: 800;
+    color: #000;
+  }
+
+  & li {
+    margin-bottom: 3px;
+    margin-left: 5px;
+    font-size: 24px;
+    font-weight: 400;
+
+    &:last-child {
+      margin-bottom: 38px;
+    }
+
+    &::before {
+      content: "—";
+      position: relative;
+      left: -7px;
+    }
+  }
+
+  & .general-btn {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+
+.contacts {
+  & .contacts-title {
+    margin-bottom: 30px;
+    font-size: 40px;
+    font-weight: 800;
+    color: #000;
+  }
+
+  & .social-contacts {
+    margin-bottom: 19px;
+    margin-left: 4px;
+
+    & a {
+      margin-right: 25px;
+      width: 50px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      & .github-icon {
+        color: #212121;
+      }
+
+      & .telegram-icon {
+        color: #039be5;
+      }
+
+      & .vk-icon {
+        border-radius: 50%;
+        background-color: #4d76a1;
+      }
+
+      & .fb-icon {
+        color: #3b5998;
+      }
+    }
+  }
+
+  & .email {
+    margin-left: 2px;
+    border-bottom: 1px solid #000;
+    font-size: 24px;
+    color: #000;
+  }
+}
